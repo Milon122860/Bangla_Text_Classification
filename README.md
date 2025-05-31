@@ -1,43 +1,67 @@
-# Bangla Text Classification using BERT
+# Bangla News Text Classification using Bangla-BERT
 
-## 📌 Project Overview
-This project focuses on multi-class text classification of Bangla news articles using transformer-based models (Bangla-BERT). The goal is to classify news into five categories.
+This project focuses on building a multi-class classification model for Bangla news articles. Using the **Bangla-BERT transformer model**, the system classifies text into one of several predefined categories such as Sports, National, International, Entertainment, etc.
 
-## 📊 Dataset
-- Source: Jamuna TV Bangla news dataset
-- Columns: `content`, `category`
-- Total samples: _XXXX_  
-- Classes: Sports, All-Bangladesh, International, Entertainment, National
 
-# 🇧🇩 Bangla Text Classification using BERT
+## Dataset Description
 
-## 🧠 Project Overview
-
-This project aims to classify Bangla news articles into five distinct categories using a transformer-based model (`sagorsarker/bangla-bert-base`). The goal is to explore natural language processing (NLP) techniques for Bangla language and evaluate the effectiveness of Bangla-BERT on multi-class classification tasks.
-
-## 🗂️ Dataset Description
-
-- **Source**: Jamuna TV Bangla News (publicly available)
-- **Features**:
-  - `content` – The Bangla news article text
-  - `category` – The label/category of the article
-- **Total Categories**: 5
+- **Dataset Name**: `Bangla_news.csv`
+- **Source**: Jamuna TV (collected for academic use)
+- **Categories**: 
   - Sports
   - All-Bangladesh
   - International
   - Entertainment
   - National
+- **Columns**:
+  - `content`: The Bangla news article
+  - `category`: The labeled category of the news
 
 
-## 📈 Key Results
+## ⚙️ Setup Instructions
 
-| Metric     | Score     |
-|------------|-----------|
-| Accuracy   | 98.XX %   |
-| F1-Score   | 98.XX %   |
-| Precision  | XX.XX %   |
-| Recall     | XX.XX %   |
-| ROC AUC    | XX.XX %   |
+1. **Clone the repository**:
+   ```bash
+   git clone https://github.com/Milon122860/Bangla_Text_Classification.git
+   cd Bangla_Text_Classification
 
-Model used: `sagorsarker/bangla-bert-base`
+
+📊 Project Steps
+✅ Step 1: Exploratory Data Analysis (EDA)
+Checked dataset structure, class distribution, missing values.
+
+Visualized text length distribution.
+
+✅ Step 2: Preprocessing
+Cleaned Bangla text using regex.
+
+Removed URLs, non-Bangla characters, and stopwords.
+
+Dropped empty rows after cleaning.
+
+✅ Step 3: Label Encoding & Train-Test Split
+Encoded category to numerical labels.
+
+80-20 split of training and test sets using stratify.
+
+✅ Step 4: Tokenization & Dataset Conversion
+Used sagorsarker/bangla-bert-base tokenizer.
+
+Converted to HuggingFace Dataset format and tokenized.
+
+✅ Step 5: Model Training
+Fine-tuned Bangla-BERT using HuggingFace Trainer.
+
+Used f1 as the evaluation metric.
+
+Trained for 1 epoch (can be tuned).
+
+✅ Step 6: Evaluation
+Evaluated with accuracy, F1, precision, recall.
+
+Generated classification report & confusion matrix.
+
+Calculated ROC AUC score for multi-class classification.
+
+
 
