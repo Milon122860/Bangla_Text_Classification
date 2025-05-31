@@ -9,21 +9,25 @@ This project focuses on multi-class text classification of Bangla news articles 
 - Total samples: _XXXX_  
 - Classes: Sports, All-Bangladesh, International, Entertainment, National
 
-## ⚙️ Setup Instructions
+# 🇧🇩 Bangla Text Classification using BERT
 
-1. Clone the repository:
-    ```bash
-    git clone https://github.com/your-username/BanglaTextClassification.git
-    cd BanglaTextClassification
-    ```
+## 🧠 Project Overview
 
-2. Install dependencies:
-    ```bash
-    pip install -r requirements.txt
-    ```
+This project aims to classify Bangla news articles into five distinct categories using a transformer-based model (`sagorsarker/bangla-bert-base`). The goal is to explore natural language processing (NLP) techniques for Bangla language and evaluate the effectiveness of Bangla-BERT on multi-class classification tasks.
 
-3. Run the notebook or scripts:
-    - `notebooks/main_notebook.ipynb`
+## 🗂️ Dataset Description
+
+- **Source**: Jamuna TV Bangla News (publicly available)
+- **Features**:
+  - `content` – The Bangla news article text
+  - `category` – The label/category of the article
+- **Total Categories**: 5
+  - Sports
+  - All-Bangladesh
+  - International
+  - Entertainment
+  - National
+
 
 ## 📈 Key Results
 
